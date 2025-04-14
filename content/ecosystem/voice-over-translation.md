@@ -2,6 +2,8 @@
 
 [UserScript](https://github.com/ilyhalight/voice-over-translation) that adds voice over translation and subtitles to many websites.
 
+![example](https://github.com/ilyhalight/voice-over-translation/raw/master/img/example.png)
+
 List of features:
 
 - Translate videos into Russian, English, or Kazakh from supported source languages
