@@ -75,11 +75,15 @@ Indicates that the video was previously a live stream.
 
 Bypass the cache for the requested translation. Works somewhat inconsistently.
 
-`extraOpts.useNewModel`
+`extraOpts.useLivelyVoice` (formerly `extraOpts.useNewModel`)
 
-Translates [some YouTube videos](https://github.com/ilyhalight/voice-over-translation/issues/897) with higher quality dubbing. Has not been officially announced yet and is still not used in their browser.
+Translate videos from English to Russian with voice clonning.
 
-First observed in autumn 2024.
+::: warning
+Requires pass `Session_id=...` Cookie field in headers option. This cookie you can get from your Yandex authorized account.
+:::
+
+Official release 21th April 2025. First observed in autumn 2024.
 
 `extraOpts.videoTitle`
 
