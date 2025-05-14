@@ -80,7 +80,7 @@ Bypass the cache for the requested translation. Works somewhat inconsistently.
 Translate videos from English to Russian with voice clonning.
 
 ::: warning
-Requires pass `Session_id=...` Cookie field in headers option. This cookie you can get from your Yandex authorized account.
+Requires additional authorization. Read [Translation with Lively voice](./translation-with-lively-voice.md) section
 :::
 
 Official release 21th April 2025. First observed in autumn 2024.
