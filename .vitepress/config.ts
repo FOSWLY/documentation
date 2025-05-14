@@ -62,6 +62,10 @@ export default defineConfig({
               text: "Advanced translation",
               link: "/guide/advanced-translation",
             },
+            {
+              text: "Translation with Lively voice",
+              link: "/guide/translation-with-lively-voice",
+            },
             { text: "Custom fetch", link: "/guide/custom-fetch" },
           ],
         },
