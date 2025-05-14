@@ -14,7 +14,7 @@ To login using a Yandex account, we have two options:
 
 1. With OAuth token
 
-Just pass the OAuth token in the VOTClient options or:
+Just pass the OAuth token in the VOTClient options:
 
 ```ts
 const client = new VOTClient({
