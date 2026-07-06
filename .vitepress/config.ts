@@ -11,6 +11,7 @@ export default defineConfig({
   vite: {
     publicDir: "public",
   },
+  base: "/",
   sitemap: {
     hostname: domain,
   },
