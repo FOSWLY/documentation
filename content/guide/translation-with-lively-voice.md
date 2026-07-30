@@ -5,7 +5,7 @@ Let's translate a video with lively voice.
 The feature has some limitations:
 
 - Requires additional authorization with Yandex account
-- Only `en` -> `ru` language pair is supported
+- Supports all availabled languages except auto -> `ru`
 - maybe something else...
 
 ## How to authorize?
