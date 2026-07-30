@@ -1,4 +1,4 @@
-# vot-backend
+# vot-backend [deprecated]
 
 [vot-backend](https://github.com/FOSWLY/vot-backend) is a server for expanding the list of supported sites for vot.js.
 
