@@ -10,7 +10,7 @@
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
   <a href="https://github.com/FOSWLY/vot-cli/releases">
-    <img src="../badges/github-releases.png" alt="Install from Github Releases" />
+    <img src="/badges/github-releases.png" alt="Install from Github Releases" />
   </a>
 </div>
 

@@ -8,13 +8,13 @@
 
 <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
   <a href="https://chromewebstore.google.com/detail/dnioaagdjgpcokckfpokpndoblenmfcg">
-    <img src="../badges/chrome-webstore.png" alt="Install from Chrome Web Store" />
+    <img src="/badges/chrome-webstore.png" alt="Install from Chrome Web Store" />
   </a>
   <a href="https://addons.mozilla.org/ru/firefox/addon/voice-over-translation">
-    <img src="../badges/firefox-addons.png" alt="Install from Firefox Add-ons" />
+    <img src="/badges/firefox-addons.png" alt="Install from Firefox Add-ons" />
   </a>
   <a href="https://github.com/ilyhalight/voice-over-translation/releases">
-    <img src="../badges/github-releases.png" alt="Install from Github Releases" />
+    <img src="/badges/github-releases.png" alt="Install from Github Releases" />
   </a>
 </div>
 
