@@ -4,15 +4,18 @@ Sometimes we need to use the api, despite the blocked Yandex servers or the pres
 
 Before you start, you need to deploy your own instance, or you can use a public one `vot-worker.toil.cc`.
 
+> [!NOTE]
+> After vot.js 3.1.0, provider `VOTWorkerProvider` (alias `VOTLegacyWorkerProvider`) was deprecated. In future versions, it will be replaced with logic from `VOTNextWorkerProvider`
+
 ```ts
 import VOTClient from "@vot.js/node";
-import { VOTWorkerProvider } from "@vot.js/core/providers/votworker"; // [!code ++] [!code focus]
+import { VOTNextWorkerProvider } from "@vot.js/core/providers/votworker"; // [!code ++] [!code focus]
 import { getVideoData } from "@vot.js/node/utils/videoData";
 
 const client = new VOTClient(); // [!code --] [!code focus:5]
 // [!code ++]
 const client = new VOTClient({
-  provider: VOTWorkerProvider // [!code ++]
+  provider: VOTNextWorkerProvider, // [!code ++]
   host: "vot-worker.toil.cc", // [!code ++]
 }); // [!code ++]
 const videoData = await getVideoData("https://youtu.be/LK6nLR1bzpI");
