@@ -4,9 +4,33 @@
 
 # vot-cli
 
-[vot-cli](https://github.com/FOSWLY/vot-cli) is a cross-platform command line interface for using voice over translation and receiving subtitles.
+[vot-cli](https://github.com/FOSWLY/vot-cli) a tool for translating videos or downloading subtitles using vot.js
 
-List of features:
+## Installation
+
+<div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+  <a href="https://github.com/FOSWLY/vot-cli/releases">
+    <img src="../badges/github-releases.png" alt="Install from Github Releases" />
+  </a>
+</div>
+
+Also, you can install [vot-cli](https://github.com/FOSWLY/vot-cli) from NPM:
+
+::: code-group
+
+```bash [npm]
+npm install -g vot-cli
+```
+
+```bash [bun]
+bun install -g vot-cli
+```
+
+:::
+
+## Features
+
+This script lets you:
 
 - Download a video translation or get a link to it
 - Download video subtitles in SRT, VTT or JSON format or get a link to them
@@ -15,14 +39,30 @@ List of features:
 - Output results in JSON or as plain links (without progress)
 - Process multiple links in one run
 
-## Installation
+## Usage
 
-You can install tool from our [GitHub](https://github.com/FOSWLY/vot-cli) repository.
+Usage example:
 
-## Parameters
+```bash
+vot-cli [options] <link> [link2] [link3] ...
+```
 
 <details>
-<summary>Click to expand</summary>
+<summary>Click to see more</summary>
+
+- `vot-cli [options] <link> [link2] [link3] ...` - general example
+- `vot-cli <link>` - get audio translation from a link
+- `vot-cli --help` - show help
+- `vot-cli --version` - show version
+- `vot-cli --json [options] <link>` - get result as JSON
+- `vot-cli --outdir=<path> <link>` - get audio translation and save it to the specified path
+- `vot-cli --outdir=<path> --reslang=en <link>` - get audio translation in English and save it to the specified path
+- `vot-cli --subs --outdir=<path> --reslang=en <link>` - get English subtitles and save them to the specified path
+- `vot-cli --outdir="." "https://www.youtube.com/watch?v=X98VPQCE_WI" "https://www.youtube.com/watch?v=djr8j-4fS3A&t=900s"` - real data example
+
+</details>
+
+### Parameters
 
 - **-h**, **--help**: show help
 - **-v**, **--version**: show script version
@@ -41,31 +81,6 @@ You can install tool from our [GitHub](https://github.com/FOSWLY/vot-cli) reposi
 - **--no-visual**: output result to stdout/stderr without progress info (1 line = 1 link)
 - **--json**: output result to stdout/stderr as JSON without progress info
 - **--no-title**: use video ID as filename, without attempting to get the video title
-
-</details>
-
-## Usage
-
-Usage example:
-
-```bash
-vot-cli [options] <link> [link2] [link3] ...
-```
-
-<details>
-<summary>Click to expand</summary>
-
-- `vot-cli [options] <link> [link2] [link3] ...` - general example
-- `vot-cli <link>` - get audio translation from a link
-- `vot-cli --help` - show help
-- `vot-cli --version` - show version
-- `vot-cli --json [options] <link>` - get result as JSON
-- `vot-cli --outdir=<path> <link>` - get audio translation and save it to the specified path
-- `vot-cli --outdir=<path> --reslang=en <link>` - get audio translation in English and save it to the specified path
-- `vot-cli --subs --outdir=<path> --reslang=en <link>` - get English subtitles and save them to the specified path
-- `vot-cli --outdir="." "https://www.youtube.com/watch?v=X98VPQCE_WI" "https://www.youtube.com/watch?v=djr8j-4fS3A&t=900s"` - real data example
-
-</details>
 
 ### JSON output examples
 
@@ -129,3 +144,13 @@ vot-cli --json ...
 ```
 
 </details>
+
+## Optional features
+
+### Using yt-dlp for video titles
+
+vot-cli can use [yt-dlp](https://github.com/yt-dlp/yt-dlp) to get human-readable video titles for output filenames.
+
+If yt-dlp is not found on the system, video IDs will be used as filenames (`X98VPQCE_WI.mp3` instead of the title).
+
+You can disable this behavior with the `--no-title` flag.
